@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server'
 const prisma = new PrismaClient()
 
 // GET - Obtener todos los usuarios
-export async function GET() {
+export async function GET() { 
   try {
     const users = await prisma.user.findMany({
       include: {
