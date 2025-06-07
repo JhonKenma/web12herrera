@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: my-nextjs-crud
+    env: node
+    plan: free
+    buildCommand: npm install && npx prisma generate && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
